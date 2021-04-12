@@ -138,7 +138,7 @@
 	box-shadow:0 0 0 0 !important;
 	width:50px !important;
 	overflow: visible !important;
-	box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important;
+	box-shadow: 0 4px 15px rgba(0,0,0,0.6) !important;
 	transition:none 0.3s cubic-bezier(.3,0,.7,1);
 }
 
@@ -171,6 +171,19 @@ Hide the song duration and elapsed text. I dont know where to put those so I jus
 .view-player .player-controls-container .progress-container .remaining {
 	display: none !important;
 }
+
+/* /1* Move the time elapsed / remianing text *1/ */
+/* .view-player .player-controls-container .progress-container .elapsed { */
+/*     color: rgba(var(--modspotify_main_fg), 0.6); */
+/*     position: absolute; */
+/*     left: 45%; */
+/*     top: 20px; */
+/* } */
+/* .view-player .player-controls-container .progress-container .remaining { */
+/*     color: rgba(var(--modspotify_main_fg), 0.6); */
+/*     position: absolute; */
+/*     left: 51%; */
+/*     top: 20px; */
 
 /* Add round corner for Gerne and Mood cards */
 .gc-image-container,
@@ -267,7 +280,8 @@ Button with text Play
 */
 .button.button-green,
 .GlueButton.GlueButton--style-green {
-	color: var(--modspotify_main_bg) !important;
+	/* color: var(--modspotify_main_bg) !important; */
+	color: var(--modspotify_secondary_fg) !important;
 }
 
 /*
@@ -498,17 +512,25 @@ body:not(.body-container--windows) .content-top-bar__profile-menu-button .dropdo
 	color: var(--modspotify_main_bg) !important;
 }
 
+.Header
+{
+    min-height: 0;
+}
+
+.Header__content-wrapper
+{
+    min-height: 100px;
+}
+
 .glue-page-header:not(.glue-page-header--album):not(.glue-page-header--playlist):not(.glue-page-header--artist):not(.glue-page-header--dailymix):not(.glue-page-header--user):not(.glue-page-header--show)
 	.glue-page-header__content-inner .glue-page-header__title-text,
 .HomeHeader .Header__content-inner .Header__title-text-inner,
 .MadeForYouHeader .Header__content-inner .Header__title-text-inner,
 .RecentlyPlayedPage__header .Header__content-inner .Header__title-text-inner {
 	background-color: var(--modspotify_main_bg);
-	padding: 5px 20px;
-	border: 5px solid var(--modspotify_main_fg) !important;
-	border-radius: 6px;
-	box-shadow: 0 4px 12px 0 rgba(var(--modspotify_rgb_cover_overlay_and_shadow),.2);
-	text-transform: uppercase;
+	padding: 10px 0px;
+    font-weight: normal;
+	text-transform: capitalize;
 }
 
 .glue-page-header.glue-page-header--album .glue-page-header__content-inner .glue-page-header__title,
@@ -520,6 +542,7 @@ body:not(.body-container--windows) .content-top-bar__profile-menu-button .dropdo
 
 span.glue-page-header__title-text {
 	color: var(--modspotify_main_fg);
+    font-weight: normal;
 }
 
 .glue-page-header .glue-page-header__content-inner .glue-page-header__button {
@@ -716,4 +739,11 @@ body.remotebar .view-player .player-bar-wrapper {
 
 .concert-title span {
 	color: var(--modspotify_secondary_fg) !important;
+}
+
+.GlueSectionDivider {
+    padding: 5px 0;
+}
+.GlueSectionDivider__title {
+    padding-top: 10px ;
 }
